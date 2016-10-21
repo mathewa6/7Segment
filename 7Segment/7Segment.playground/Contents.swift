@@ -9,26 +9,34 @@ class Segment: UIView {
         case vertical
     }
     
-    /// How 'thick' the segment is. This is always the smaller value between length and thickness.
-    var thickness: CGFloat = 5.0
+    /// How 'thick' the segment is. This is always the smaller value between length and breadth.
+    var breadth: CGFloat = 5.0
     
-    /// Length of the segment. It is always the longer value between length and thickness.
+    /// Length of the segment. It is always the longer value between length and breadth.
     var length: CGFloat = 25.0
     
-    /// The side of triangle at each corner that is cutoff to give the 'tip' of the segment. Otherwise it is 1/15th of the length.
-    var cutoff: CGFloat = 5.0
-    
-    /// Indicates whether the segment is "upright": vertical or "sideways": horizontal. This is ONLY to indicate which dimension is longer to help draw the segment.
-    var orientation: Orientation
-    
     /// The dominant color of each segment. Defaults to red.
-    var fillColor: UIColor = UIColor.red
+    var fillColor: UIColor = UIColor.red {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     /// The outline color of each segment. Defaults to white.
-    var strokeColor: UIColor = UIColor.white
+    var strokeColor: UIColor = UIColor.white {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
-    /// The width used to stroke the outline of each segment. It is always thickness/10.
-    var strokeWidth: CGFloat = 0.5
+    /// The side of triangle at each corner that is cutoff to give the 'tip' of the segment. Otherwise it is 1/15th of the length.
+    private var cutoff: CGFloat { return length/10 }
+    
+    /// The width used to stroke the outline of each segment. It is always breadth/10.
+    private var strokeWidth: CGFloat { return breadth/10 }
+    
+    /// Indicates whether the segment is "upright": vertical or "sideways": horizontal. This is ONLY to indicate which dimension is longer to help draw the segment.
+    private var orientation: Orientation
     
     override init(frame: CGRect) {
         let h = frame.size.height
@@ -38,14 +46,11 @@ class Segment: UIView {
         switch orientation {
         case .horizontal:
             length = w
-            thickness = h
+            breadth = h
         case .vertical:
             length = h
-            thickness = w
+            breadth = w
         }
-        
-        cutoff = length/10
-        strokeWidth = thickness/10
         
         super.init(frame: frame)
         self.backgroundColor = UIColor.clear
@@ -72,18 +77,18 @@ class Segment: UIView {
         case .horizontal:
             context?.move(to: CGPoint(x: cutoff, y: offset))
             context?.addLine(to: CGPoint(x: length - cutoff, y: offset))
-            context?.addLine(to: CGPoint(x: length - offset, y: thickness/2))
-            context?.addLine(to: CGPoint(x: length - cutoff, y: thickness - offset))
-            context?.addLine(to: CGPoint(x: cutoff, y: thickness - offset))
-            context?.addLine(to: CGPoint(x: offset, y: thickness/2))
+            context?.addLine(to: CGPoint(x: length - offset, y: breadth/2))
+            context?.addLine(to: CGPoint(x: length - cutoff, y: breadth - offset))
+            context?.addLine(to: CGPoint(x: cutoff, y: breadth - offset))
+            context?.addLine(to: CGPoint(x: offset, y: breadth/2))
             
         case .vertical:
             context?.move(to: CGPoint(x: offset, y: cutoff))
             context?.addLine(to: CGPoint(x: offset, y: length - cutoff))
-            context?.addLine(to: CGPoint(x: thickness/2, y: length - offset))
-            context?.addLine(to: CGPoint(x: thickness - offset, y: length - cutoff))
-            context?.addLine(to: CGPoint(x: thickness - offset, y: cutoff))
-            context?.addLine(to: CGPoint(x: thickness/2, y: offset))
+            context?.addLine(to: CGPoint(x: breadth/2, y: length - offset))
+            context?.addLine(to: CGPoint(x: breadth - offset, y: length - cutoff))
+            context?.addLine(to: CGPoint(x: breadth - offset, y: cutoff))
+            context?.addLine(to: CGPoint(x: breadth/2, y: offset))
         }
 
         context?.closePath()
@@ -91,7 +96,7 @@ class Segment: UIView {
     }
     
     override var description: String {
-        return "\(orientation) > (\(thickness), \(length))"
+        return "\(orientation) > (\(breadth), \(length))"
     }
 }
 
