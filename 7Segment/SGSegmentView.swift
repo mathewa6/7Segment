@@ -93,21 +93,6 @@ class SGSegmentView: UIView {
         super.init(coder: aDecoder)
         self.backgroundColor = UIColor.clear
         
-        let h = self.bounds.size.height
-        let w = self.bounds.size.width
-        
-        orientation = w > h ? .horizontal : .vertical
-        switch orientation {
-        case .horizontal:
-            length = w
-            breadth = h
-        case .vertical:
-            length = h
-            breadth = w
-        default:
-            length = w
-            breadth = h
-        }
     }
     
     override func draw(_ rect: CGRect) {
