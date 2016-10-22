@@ -15,6 +15,7 @@
 		9715F6EB1DBA887C003BBA5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9715F6E91DBA887C003BBA5B /* LaunchScreen.storyboard */; };
 		9715F6F61DBA887C003BBA5B /* _SegmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715F6F51DBA887C003BBA5B /* _SegmentTests.swift */; };
 		9715F7011DBA887C003BBA5B /* _SegmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715F7001DBA887C003BBA5B /* _SegmentUITests.swift */; };
+		9715F7121DBAE7DE003BBA5B /* SGSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715F7111DBAE7DE003BBA5B /* SGSegmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		9715F7001DBA887C003BBA5B /* _SegmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _SegmentUITests.swift; sourceTree = "<group>"; };
 		9715F7021DBA887C003BBA5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9715F70E1DBA97B7003BBA5B /* 7Segment.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 7Segment.playground; sourceTree = "<group>"; };
+		9715F7111DBAE7DE003BBA5B /* SGSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSegmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				9715F6DD1DBA887C003BBA5B /* AppDelegate.swift */,
+				9715F7111DBAE7DE003BBA5B /* SGSegmentView.swift */,
 				9715F6DF1DBA887C003BBA5B /* ViewController.swift */,
 				9715F70E1DBA97B7003BBA5B /* 7Segment.playground */,
 				9715F6E11DBA887C003BBA5B /* Main.storyboard */,
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9715F7121DBAE7DE003BBA5B /* SGSegmentView.swift in Sources */,
 				9715F6E01DBA887C003BBA5B /* ViewController.swift in Sources */,
 				9715F6DE1DBA887C003BBA5B /* AppDelegate.swift in Sources */,
 				9715F6E61DBA887C003BBA5B /* _Segment.xcdatamodeld in Sources */,
@@ -520,6 +524,7 @@
 				9715F7071DBA887C003BBA5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9715F7081DBA887C003BBA5B /* Build configuration list for PBXNativeTarget "7SegmentTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +533,7 @@
 				9715F70A1DBA887C003BBA5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9715F70B1DBA887C003BBA5B /* Build configuration list for PBXNativeTarget "7SegmentUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +542,7 @@
 				9715F70D1DBA887C003BBA5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
