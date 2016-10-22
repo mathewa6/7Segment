@@ -32,6 +32,48 @@ class SGSegmentView: UIView {
         }
     }
     
+    override var frame: CGRect {
+        didSet {
+            let h = self.frame.size.height
+            let w = self.frame.size.width
+            
+            orientation = w > h ? .horizontal : .vertical
+            switch orientation {
+            case .horizontal:
+                length = w
+                breadth = h
+            case .vertical:
+                length = h
+                breadth = w
+            default:
+                length = w
+                breadth = h
+            }
+            setNeedsDisplay()
+        }
+    }
+    
+    override var bounds: CGRect {
+        didSet {
+            let h = self.frame.size.height
+            let w = self.frame.size.width
+            
+            orientation = w > h ? .horizontal : .vertical
+            switch orientation {
+            case .horizontal:
+                length = w
+                breadth = h
+            case .vertical:
+                length = h
+                breadth = w
+            default:
+                length = w
+                breadth = h
+            }
+            setNeedsDisplay()
+        }
+    }
+    
     /// How 'thick' the segment is. This is always the smaller value between length and breadth.
     private var breadth: CGFloat = 5.0
     
@@ -74,8 +116,8 @@ class SGSegmentView: UIView {
         super.init(coder: aDecoder)
         self.backgroundColor = UIColor.clear
         
-        let h = self.frame.size.height
-        let w = self.frame.size.width
+        let h = self.bounds.size.height
+        let w = self.bounds.size.width
         
         orientation = w > h ? .horizontal : .vertical
         switch orientation {
