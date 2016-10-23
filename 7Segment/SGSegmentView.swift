@@ -57,8 +57,8 @@ class SGSegmentView: UIView {
     /// Length of the segment. It is always the longer value between length and breadth.
     private var length: CGFloat = 25.0
     
-    /// The side of triangle at each corner that is cutoff to give the 'tip' of the segment. Otherwise it is 1/15th of the length.
-    private var cutoff: CGFloat { return length/10 }
+    /// The side of triangle at each corner that is cutoff to give the 'tip' of the segment. Otherwise it is half the breadth. This is done to keep the slope of each angled section of the segment equal to 1(see drawRect()), thereby allowing us to align neighboring segments.
+    private var cutoff: CGFloat { return breadth/2 }
     
     /// The width used to stroke the outline of each segment. It is always breadth/10.
     private var strokeWidth: CGFloat { return breadth/10 }
