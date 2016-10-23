@@ -16,6 +16,8 @@
 		9715F6F61DBA887C003BBA5B /* _SegmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715F6F51DBA887C003BBA5B /* _SegmentTests.swift */; };
 		9715F7011DBA887C003BBA5B /* _SegmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715F7001DBA887C003BBA5B /* _SegmentUITests.swift */; };
 		9715F7121DBAE7DE003BBA5B /* SGSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715F7111DBAE7DE003BBA5B /* SGSegmentView.swift */; };
+		978FFE9F1DBD447C00E1F547 /* SGSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FFE9D1DBD447C00E1F547 /* SGSegmentViewController.swift */; };
+		978FFEA01DBD447C00E1F547 /* SGSegmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 978FFE9E1DBD447C00E1F547 /* SGSegmentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		9715F7021DBA887C003BBA5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9715F70E1DBA97B7003BBA5B /* 7Segment.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 7Segment.playground; sourceTree = "<group>"; };
 		9715F7111DBAE7DE003BBA5B /* SGSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSegmentView.swift; sourceTree = "<group>"; };
+		978FFE9D1DBD447C00E1F547 /* SGSegmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSegmentViewController.swift; sourceTree = "<group>"; };
+		978FFE9E1DBD447C00E1F547 /* SGSegmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGSegmentViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 			children = (
 				9715F6DD1DBA887C003BBA5B /* AppDelegate.swift */,
 				9715F7111DBAE7DE003BBA5B /* SGSegmentView.swift */,
+				978FFE9D1DBD447C00E1F547 /* SGSegmentViewController.swift */,
+				978FFE9E1DBD447C00E1F547 /* SGSegmentViewController.xib */,
 				9715F6DF1DBA887C003BBA5B /* ViewController.swift */,
 				9715F70E1DBA97B7003BBA5B /* 7Segment.playground */,
 				9715F6E11DBA887C003BBA5B /* Main.storyboard */,
@@ -243,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				978FFEA01DBD447C00E1F547 /* SGSegmentViewController.xib in Resources */,
 				9715F6EB1DBA887C003BBA5B /* LaunchScreen.storyboard in Resources */,
 				9715F6E81DBA887C003BBA5B /* Assets.xcassets in Resources */,
 				9715F6E31DBA887C003BBA5B /* Main.storyboard in Resources */,
@@ -270,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				978FFE9F1DBD447C00E1F547 /* SGSegmentViewController.swift in Sources */,
 				9715F7121DBAE7DE003BBA5B /* SGSegmentView.swift in Sources */,
 				9715F6E01DBA887C003BBA5B /* ViewController.swift in Sources */,
 				9715F6DE1DBA887C003BBA5B /* AppDelegate.swift in Sources */,
