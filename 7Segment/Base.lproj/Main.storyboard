@@ -19,25 +19,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijh-Vr-qtj" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ijh-Vr-qtj" secondAttribute="height" multiplier="3:1" id="hAV-3G-gTu"/>
-                                    <constraint firstAttribute="width" constant="240" id="oKr-1i-PXQ"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                        <color key="value" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                                        <color key="value" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZnV-pq-9Dx">
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ZnV-pq-9Dx" secondAttribute="height" multiplier="1:1" id="7a2-mG-PHY"/>
-                                    <constraint firstAttribute="width" constant="240" id="sUY-jZ-0NG"/>
+                                    <constraint firstAttribute="width" secondItem="ZnV-pq-9Dx" secondAttribute="height" multiplier="1:1" id="3wU-oE-5JB"/>
+                                    <constraint firstAttribute="width" constant="360" id="9Pb-Hz-NHD"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="Vsy-ru-ufB" kind="embed" id="Y5j-MC-AUx"/>
@@ -46,9 +31,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ZnV-pq-9Dx" firstAttribute="top" secondItem="ijh-Vr-qtj" secondAttribute="bottom" constant="7.5" id="2vb-iA-OBy"/>
-                            <constraint firstItem="ijh-Vr-qtj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MCT-Ua-g56"/>
-                            <constraint firstItem="ijh-Vr-qtj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kLL-NB-PrN"/>
+                            <constraint firstItem="ZnV-pq-9Dx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WDz-dB-bhd"/>
                             <constraint firstItem="ZnV-pq-9Dx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q38-hd-jjp"/>
                         </constraints>
                     </view>
