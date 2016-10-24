@@ -12,6 +12,26 @@ class SGSegmentViewController: UIViewController {
 
     @IBOutlet var segments: [SGSegmentView]?
     
+    
+    /// The color to use for segments that are enabled.
+    public var color: UIColor {
+        didSet {
+            for seg in segments! {
+                seg.fillColor = color
+            }
+        }
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        self.color = UIColor.red
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.color = UIColor.red
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,15 +44,12 @@ class SGSegmentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    /// Use this function to display a hexadecimal value using the segments. Subclasses should override this method to provide the logic for displaying the
+    /// correct digit with the segments[] property.
+    ///
+    /// - parameter value: A hexadecimal value to be displayed on the segment display.
+    public func display(value: Int) {
+        
     }
-    */
-
 }
