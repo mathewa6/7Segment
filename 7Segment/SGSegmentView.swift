@@ -51,6 +51,13 @@ class SGSegmentView: UIView {
         setNeedsDisplay()
     }
     
+    /// Used to set and check the state of a segment. true = on (fillColor = fillColor), false = off (fillColor = strokeColor)
+    public var state: Bool = true {
+        didSet {
+            self.fillColor = state ? self.fillColor : self.strokeColor
+        }
+    }
+    
     /// How 'thick' the segment is. This is always the smaller value between length and breadth.
     private var breadth: CGFloat = 5.0
     
