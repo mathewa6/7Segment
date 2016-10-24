@@ -51,7 +51,13 @@ class SGSegmentView: UIView {
         setNeedsDisplay()
     }
     
-    /// Used to set and check the state of a segment. true = on (fillColor = fillColor), false = off (fillColor = strokeColor)
+    /**
+     Used to set and check the state of a segment.
+     
+     **true** = on      ( fillColor = fillColor )
+     
+     **false** = off    ( fillColor = strokeColor )
+    */
     public var state: Bool = true {
         didSet {
             self.fillColor = state ? self.fillColor : self.strokeColor
