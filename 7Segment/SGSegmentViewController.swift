@@ -8,7 +8,11 @@
 
 import UIKit
 
-class SGSegmentViewController: UIViewController {
+protocol SGSegmentLogic {
+    func display(value: Int)
+}
+
+class SGSegmentViewController: UIViewController, SGSegmentLogic {
 
     @IBOutlet var segments: [SGSegmentView]?
     

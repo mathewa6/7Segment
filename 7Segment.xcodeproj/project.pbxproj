@@ -18,6 +18,7 @@
 		9715F7121DBAE7DE003BBA5B /* SGSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715F7111DBAE7DE003BBA5B /* SGSegmentView.swift */; };
 		978FFE9F1DBD447C00E1F547 /* SGSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FFE9D1DBD447C00E1F547 /* SGSegmentViewController.swift */; };
 		978FFEA01DBD447C00E1F547 /* SGSegmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 978FFE9E1DBD447C00E1F547 /* SGSegmentViewController.xib */; };
+		978FFEA31DC00A6200E1F547 /* SGSevenSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FFEA21DC00A6200E1F547 /* SGSevenSegmentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		9715F7111DBAE7DE003BBA5B /* SGSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSegmentView.swift; sourceTree = "<group>"; };
 		978FFE9D1DBD447C00E1F547 /* SGSegmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSegmentViewController.swift; sourceTree = "<group>"; };
 		978FFE9E1DBD447C00E1F547 /* SGSegmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGSegmentViewController.xib; sourceTree = "<group>"; };
+		978FFEA21DC00A6200E1F547 /* SGSevenSegmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSevenSegmentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				9715F6DD1DBA887C003BBA5B /* AppDelegate.swift */,
 				9715F7111DBAE7DE003BBA5B /* SGSegmentView.swift */,
+				978FFEA21DC00A6200E1F547 /* SGSevenSegmentViewController.swift */,
 				978FFE9D1DBD447C00E1F547 /* SGSegmentViewController.swift */,
 				978FFE9E1DBD447C00E1F547 /* SGSegmentViewController.xib */,
 				9715F6DF1DBA887C003BBA5B /* ViewController.swift */,
@@ -279,6 +282,7 @@
 			files = (
 				978FFE9F1DBD447C00E1F547 /* SGSegmentViewController.swift in Sources */,
 				9715F7121DBAE7DE003BBA5B /* SGSegmentView.swift in Sources */,
+				978FFEA31DC00A6200E1F547 /* SGSevenSegmentViewController.swift in Sources */,
 				9715F6E01DBA887C003BBA5B /* ViewController.swift in Sources */,
 				9715F6DE1DBA887C003BBA5B /* AppDelegate.swift in Sources */,
 				9715F6E61DBA887C003BBA5B /* _Segment.xcdatamodeld in Sources */,
