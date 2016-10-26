@@ -2,7 +2,7 @@
 //  SGSevenSegmentViewController.swift
 //  7Segment
 //
-//  Created by Adi Mathew on 10/25/16.
+//  Created by Adi Mathew on 10/26/16.
 //  Copyright © 2016 RCPD. All rights reserved.
 //
 

@@ -8,13 +8,9 @@
 
 import UIKit
 
-protocol SGSegmentLogic {
-    func display(value: Int)
-}
-
 class SGSegmentViewController: UIViewController, SGSegmentLogic {
 
-    @IBOutlet var segments: [SGSegmentView]?
+    @IBOutlet public var segments: [SGSegmentView]?
     
     
     /// The color to use for segments that are enabled.
@@ -40,7 +36,7 @@ class SGSegmentViewController: UIViewController, SGSegmentLogic {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
+        self.display(value: 1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,12 +44,19 @@ class SGSegmentViewController: UIViewController, SGSegmentLogic {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    /// Use this function to display a hexadecimal value using the segments. Subclasses should override this method to provide the logic for displaying the
-    /// correct digit with the segments[] property.
-    ///
-    /// - parameter value: A hexadecimal value to be displayed on the segment display.
-    public func display(value: Int) {
-        
+    func display(value: Int) {
+        if value <= 0 {
+            for seg in segments! {
+                seg.state = true
+            }
+        } else {
+            for seg in segments! {
+                if seg != segments?.first {
+                    seg.state = false
+                } else {
+                    seg.state = true
+                }
+            }
+        }
     }
 }
