@@ -8,8 +8,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SGSevenSegmentViewController" customModule="_Segment" customModuleProvider="target">
             <connections>
+                <outlet property="view" destination="Y9l-5i-WAr" id="gNq-Lk-c6j"/>
                 <outletCollection property="segments" destination="HjM-MS-ttc" collectionClass="NSMutableArray" id="b0C-jR-V1O"/>
                 <outletCollection property="segments" destination="a8I-iB-Xug" collectionClass="NSMutableArray" id="gyg-W5-rRz"/>
+                <outletCollection property="segments" destination="E1j-7o-b8c" collectionClass="NSMutableArray" id="ILL-mI-2oJ"/>
+                <outletCollection property="segments" destination="c1y-A1-joD" collectionClass="NSMutableArray" id="Wf2-r4-Dfd"/>
+                <outletCollection property="segments" destination="iJ3-Dm-ja7" collectionClass="NSMutableArray" id="qwF-fM-fya"/>
+                <outletCollection property="segments" destination="PBq-1f-bq5" collectionClass="NSMutableArray" id="sk8-PD-hGn"/>
+                <outletCollection property="segments" destination="UtO-kr-0D8" collectionClass="NSMutableArray" id="lr2-Rc-GU9"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -40,13 +40,13 @@
             </objects>
             <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
-        <!--Segment View Controller-->
+        <!--Seven Segment View Controller-->
         <scene sceneID="lVP-cU-xcL">
             <objects>
-                <viewController id="Vsy-ru-ufB" customClass="SGSegmentViewController" customModule="_Segment" customModuleProvider="target" sceneMemberID="viewController"/>
+                <viewController id="Vsy-ru-ufB" customClass="SGSevenSegmentViewController" customModule="_Segment" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7MP-PW-gdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="699"/>
+            <point key="canvasLocation" x="139" y="794"/>
         </scene>
     </scenes>
 </document>
