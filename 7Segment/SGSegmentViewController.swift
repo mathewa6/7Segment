@@ -8,7 +8,8 @@
 
 import UIKit
 
-class SGSegmentViewController: UIViewController, SGSegmentLogic {
+/// This is an abstract superclass that holds properties like segments and color. To implement logic about which segments to turn on/off, you have to conform to the SGSegmentLogic protocol. For segments in a subclass' .xib, you need to select all segments in Interface Builder and control+drag to the File's Owner.
+class SGSegmentViewController: UIViewController {
 
     @IBOutlet public var segments: [SGSegmentView]?
     
@@ -36,7 +37,6 @@ class SGSegmentViewController: UIViewController, SGSegmentLogic {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.display(value: 1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,19 +44,4 @@ class SGSegmentViewController: UIViewController, SGSegmentLogic {
         // Dispose of any resources that can be recreated.
     }
     
-    func display(value: Int) {
-        if value <= 0 {
-            for seg in segments! {
-                seg.state = true
-            }
-        } else {
-            for seg in segments! {
-                if seg != segments?.first {
-                    seg.state = false
-                } else {
-                    seg.state = true
-                }
-            }
-        }
-    }
 }

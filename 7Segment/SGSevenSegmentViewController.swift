@@ -8,12 +8,13 @@
 
 import UIKit
 
-class SGSevenSegmentViewController: SGSegmentViewController {
+class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        display(value: 1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +23,20 @@ class SGSevenSegmentViewController: SGSegmentViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func display(value: Int) {
+        if value <= 0 {
+            for seg in segments! {
+                seg.state = true
+            }
+        } else {
+            for seg in segments! {
+                if seg != segments?.first {
+                    seg.state = false
+                } else {
+                    seg.state = true
+                }
+            }
+        }
     }
-    */
-
+    
 }
