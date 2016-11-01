@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,10 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZnV-pq-9Dx">
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ZnV-pq-9Dx" secondAttribute="height" multiplier="1:1" id="3wU-oE-5JB"/>
-                                    <constraint firstAttribute="width" constant="360" id="9Pb-Hz-NHD"/>
-                                </constraints>
+                                <rect key="frame" x="16" y="28" width="343" height="303"/>
                                 <connections>
                                     <segue destination="Vsy-ru-ufB" kind="embed" id="Y5j-MC-AUx"/>
                                 </connections>
@@ -31,8 +31,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ZnV-pq-9Dx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WDz-dB-bhd"/>
-                            <constraint firstItem="ZnV-pq-9Dx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q38-hd-jjp"/>
+                            <constraint firstItem="ZnV-pq-9Dx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="AGG-TB-Lbk"/>
+                            <constraint firstItem="ZnV-pq-9Dx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="BKx-pu-TRv"/>
+                            <constraint firstItem="ZnV-pq-9Dx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hnw-Ls-lar"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZnV-pq-9Dx" secondAttribute="bottom" constant="336" id="iir-6g-ON3"/>
                         </constraints>
                     </view>
                 </viewController>

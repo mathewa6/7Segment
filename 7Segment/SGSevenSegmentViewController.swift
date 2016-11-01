@@ -14,7 +14,7 @@ class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        display(value: 1)
+        display(value: 0)
     }
 
     override func didReceiveMemoryWarning() {
