@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11542"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,9 +27,8 @@
             <rect key="frame" x="0.0" y="0.0" width="250" height="400"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c1y-A1-joD" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
-                    <frame key="frameInset" minX="27" minY="52" width="50" height="150"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1y-A1-joD" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
+                    <rect key="frame" x="27" y="52" width="50" height="150"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
@@ -36,9 +39,8 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E1j-7o-b8c" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
-                    <frame key="frameInset" minX="173" minY="52" width="50" height="150"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1j-7o-b8c" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
+                    <rect key="frame" x="173" y="52" width="50" height="150"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
@@ -49,9 +51,8 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a8I-iB-Xug" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
-                    <frame key="frameInset" minX="50" minY="175" width="150" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8I-iB-Xug" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
+                    <rect key="frame" x="50" y="174" width="150" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
@@ -62,9 +63,23 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HjM-MS-ttc" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
-                    <frame key="frameInset" minX="50" minY="29" width="150" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjM-MS-ttc" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
+                    <rect key="frame" x="50" y="29" width="150" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="HjM-MS-ttc" secondAttribute="height" multiplier="3:1" id="NWU-Db-FYa"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                            <color key="value" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                            <color key="value" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UtO-kr-0D8" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
+                    <rect key="frame" x="27" y="197" width="50" height="150"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
@@ -75,14 +90,8 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUw-MP-TaR">
-                    <frame key="frameInset" minX="77" minY="79" width="96" height="96"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UtO-kr-0D8" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
-                    <frame key="frameInset" minX="27" minY="196" width="50" height="150"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJ3-Dm-ja7" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
+                    <rect key="frame" x="173" y="197" width="50" height="150"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
@@ -93,9 +102,8 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJ3-Dm-ja7" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
-                    <frame key="frameInset" minX="173" minY="196" width="50" height="150"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBq-1f-bq5" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
+                    <rect key="frame" x="50" y="320" width="150" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
@@ -105,27 +113,42 @@
                             <color key="value" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
-                </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PBq-1f-bq5" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
-                    <frame key="frameInset" minX="50" minY="319" width="150" height="50"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
-                            <color key="value" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                            <color key="value" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uUx-CV-9cy">
-                    <frame key="frameInset" minX="77" minY="223" width="96" height="96"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iJ3-Dm-ja7" firstAttribute="width" secondItem="E1j-7o-b8c" secondAttribute="width" id="0Yr-nk-BgC"/>
+                <constraint firstItem="PBq-1f-bq5" firstAttribute="top" secondItem="UtO-kr-0D8" secondAttribute="bottom" constant="-27" id="8Dc-YG-NPT"/>
+                <constraint firstItem="HjM-MS-ttc" firstAttribute="centerX" secondItem="Y9l-5i-WAr" secondAttribute="centerX" id="A8D-VR-EQZ"/>
+                <constraint firstItem="a8I-iB-Xug" firstAttribute="leading" secondItem="HjM-MS-ttc" secondAttribute="leading" id="AAs-nN-FPK"/>
+                <constraint firstItem="c1y-A1-joD" firstAttribute="height" secondItem="HjM-MS-ttc" secondAttribute="width" id="D0R-0I-7ic"/>
+                <constraint firstItem="a8I-iB-Xug" firstAttribute="height" secondItem="HjM-MS-ttc" secondAttribute="height" id="NUD-kE-uu6"/>
+                <constraint firstItem="UtO-kr-0D8" firstAttribute="top" secondItem="a8I-iB-Xug" secondAttribute="bottom" constant="-27" id="Niu-f9-FNf"/>
+                <constraint firstItem="PBq-1f-bq5" firstAttribute="height" secondItem="HjM-MS-ttc" secondAttribute="height" id="Pyl-dp-h8C"/>
+                <constraint firstItem="E1j-7o-b8c" firstAttribute="width" secondItem="c1y-A1-joD" secondAttribute="width" id="RLx-Cn-3x5"/>
+                <constraint firstItem="PBq-1f-bq5" firstAttribute="width" secondItem="HjM-MS-ttc" secondAttribute="width" id="Z2o-7E-GK8"/>
+                <constraint firstItem="HjM-MS-ttc" firstAttribute="width" secondItem="Y9l-5i-WAr" secondAttribute="height" multiplier="3:8" id="Zbi-hu-3k8"/>
+                <constraint firstItem="iJ3-Dm-ja7" firstAttribute="top" secondItem="E1j-7o-b8c" secondAttribute="bottom" constant="-5" id="cxz-gn-wMm"/>
+                <constraint firstItem="UtO-kr-0D8" firstAttribute="width" secondItem="c1y-A1-joD" secondAttribute="width" id="d71-du-xDR"/>
+                <constraint firstItem="c1y-A1-joD" firstAttribute="width" secondItem="HjM-MS-ttc" secondAttribute="height" id="e1h-b9-XPH"/>
+                <constraint firstItem="c1y-A1-joD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Y9l-5i-WAr" secondAttribute="leading" priority="250" constant="27" id="eTh-DY-vGH"/>
+                <constraint firstItem="UtO-kr-0D8" firstAttribute="height" secondItem="c1y-A1-joD" secondAttribute="height" id="feb-92-9gY"/>
+                <constraint firstItem="iJ3-Dm-ja7" firstAttribute="height" secondItem="E1j-7o-b8c" secondAttribute="height" id="gH4-H0-dt7"/>
+                <constraint firstItem="HjM-MS-ttc" firstAttribute="top" secondItem="Y9l-5i-WAr" secondAttribute="top" priority="250" constant="29" id="gS8-0q-yHD"/>
+                <constraint firstItem="iJ3-Dm-ja7" firstAttribute="leading" secondItem="a8I-iB-Xug" secondAttribute="trailing" constant="-27" id="igl-ri-hyM"/>
+                <constraint firstItem="E1j-7o-b8c" firstAttribute="leading" secondItem="HjM-MS-ttc" secondAttribute="trailing" constant="-27" id="ixT-q3-mk1"/>
+                <constraint firstItem="c1y-A1-joD" firstAttribute="top" secondItem="HjM-MS-ttc" secondAttribute="bottom" constant="-27" id="jhk-9u-VCC"/>
+                <constraint firstAttribute="bottom" secondItem="c1y-A1-joD" secondAttribute="bottom" constant="198" id="kQB-0B-acY"/>
+                <constraint firstItem="PBq-1f-bq5" firstAttribute="leading" secondItem="HjM-MS-ttc" secondAttribute="leading" id="kbK-Co-cmI"/>
+                <constraint firstItem="a8I-iB-Xug" firstAttribute="width" secondItem="HjM-MS-ttc" secondAttribute="width" id="kcl-HE-IXg"/>
+                <constraint firstItem="E1j-7o-b8c" firstAttribute="top" secondItem="HjM-MS-ttc" secondAttribute="bottom" constant="-27" id="opO-yw-PXw"/>
+                <constraint firstItem="HjM-MS-ttc" firstAttribute="leading" secondItem="c1y-A1-joD" secondAttribute="trailing" constant="-27" id="pjY-zg-29S"/>
+                <constraint firstItem="a8I-iB-Xug" firstAttribute="leading" secondItem="UtO-kr-0D8" secondAttribute="trailing" constant="-27" id="qsd-Va-HSr"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="E1j-7o-b8c" secondAttribute="trailing" priority="250" constant="27" id="vMq-TQ-DC6"/>
+                <constraint firstItem="HjM-MS-ttc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Y9l-5i-WAr" secondAttribute="leading" priority="250" constant="50" id="vZt-pb-Ixj"/>
+                <constraint firstItem="iJ3-Dm-ja7" firstAttribute="top" secondItem="a8I-iB-Xug" secondAttribute="bottom" constant="-27" id="ww1-oH-wcj"/>
+                <constraint firstItem="E1j-7o-b8c" firstAttribute="height" secondItem="c1y-A1-joD" secondAttribute="height" id="yQU-G7-bXx"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-6" y="-194"/>
