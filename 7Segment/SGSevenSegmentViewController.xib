@@ -30,6 +30,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1y-A1-joD" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
                     <rect key="frame" x="27" y="53" width="50" height="150"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="c1y-A1-joD" secondAttribute="height" multiplier="1:3" id="DNc-ka-Nci"/>
+                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
                             <color key="value" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,6 +69,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjM-MS-ttc" customClass="SGSegmentView" customModule="_Segment" customModuleProvider="target">
                     <rect key="frame" x="50" y="30" width="150" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="HjM-MS-ttc" secondAttribute="height" multiplier="3:1" id="Ru2-fw-jSm"/>
+                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
                             <color key="value" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -136,7 +142,6 @@
                 <constraint firstItem="HjM-MS-ttc" firstAttribute="centerX" secondItem="Y9l-5i-WAr" secondAttribute="centerX" id="A8D-VR-EQZ"/>
                 <constraint firstItem="a8I-iB-Xug" firstAttribute="leading" secondItem="HjM-MS-ttc" secondAttribute="leading" id="AAs-nN-FPK"/>
                 <constraint firstItem="eAD-An-1mD" firstAttribute="leading" secondItem="c1y-A1-joD" secondAttribute="trailing" id="BAp-bR-VoM"/>
-                <constraint firstItem="c1y-A1-joD" firstAttribute="height" secondItem="HjM-MS-ttc" secondAttribute="width" id="D0R-0I-7ic"/>
                 <constraint firstItem="Mw8-bI-opR" firstAttribute="height" secondItem="eAD-An-1mD" secondAttribute="height" id="F7D-zb-vsH"/>
                 <constraint firstItem="iJ3-Dm-ja7" firstAttribute="leading" secondItem="Mw8-bI-opR" secondAttribute="trailing" id="F8P-Sa-nWy"/>
                 <constraint firstItem="a8I-iB-Xug" firstAttribute="height" secondItem="HjM-MS-ttc" secondAttribute="height" id="NUD-kE-uu6"/>
