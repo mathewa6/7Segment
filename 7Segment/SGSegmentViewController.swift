@@ -9,6 +9,7 @@
 import UIKit
 
 /// This is an abstract superclass that holds properties like segments and color. To implement logic about which segments to turn on/off, you have to conform to the SGSegmentLogic protocol. For segments in a subclass' .xib, you need to select all segments in Interface Builder and control+drag to the File's Owner.
+/// - note: Subclass this and implement SGSegmentLogic for 7, 9, 14 and 16 segment displays.
 class SGSegmentViewController: UIViewController {
 
     @IBOutlet public var segments: [SGSegmentView]?
