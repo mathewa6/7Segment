@@ -21,12 +21,22 @@ class SGSegmentView: UIView {
     /// The dominant color of each segment. Defaults to red.
     @IBInspectable var fillColor: UIColor = UIColor.red {
         didSet {
+            currentStateColor = fillColor
             setNeedsDisplay()
         }
     }
     
     /// The outline color of each segment. Defaults to white.
     @IBInspectable var strokeColor: UIColor = UIColor.white {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    
+    /// This is used to toggle the fillColor based on whether the state is true or false.
+    /// It is set whenever fillColor is changed directly and is used in drawRect() for setFill:
+    private var currentStateColor: UIColor = UIColor.red {
         didSet {
             setNeedsDisplay()
         }
@@ -60,7 +70,7 @@ class SGSegmentView: UIView {
     */
     public var state: Bool = true {
         didSet {
-            self.fillColor = state ? self.fillColor : self.strokeColor
+            self.currentStateColor = state ? self.fillColor : self.strokeColor
         }
     }
     
@@ -116,7 +126,7 @@ class SGSegmentView: UIView {
         // Set up the stroke/fill color and stroke width.
         context?.setStrokeColor(strokeColor.cgColor)
         context?.setLineWidth(strokeWidth)
-        context?.setFillColor(fillColor.cgColor)
+        context?.setFillColor(currentStateColor.cgColor)
         
         // Create an offset to account for the stroke thickness and prevent drawing outside the rect.
         let offset = strokeWidth/2

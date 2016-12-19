@@ -22,9 +22,14 @@ class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        display(value: 0)
+        display(value: 12)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,18 +42,17 @@ class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
     ///
     /// - Parameter value: Must be in [0, 15].
     func display(value: Int) {
-        if value <= 0 {
-            for seg in segments! {
-                seg.state = true
-            }
+        // Turn off all segments to prepare for new value.
+        _ = segments?.map({
+            $0.state = false
+        })
+        
+        // If new value is invalid then only g is set.
+        if value < 0 || value >= 16 {
+            gSegment.state = true
         } else {
-            for seg in segments! {
-                if seg != segments?.first {
-                    seg.state = false
-                } else {
-                    seg.state = true
-                }
-            }
+            bSegment.state = true
+            cSegment.state = true
         }
     }
     
