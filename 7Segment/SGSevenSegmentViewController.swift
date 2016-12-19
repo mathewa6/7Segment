@@ -22,7 +22,7 @@ class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        display(value: 12)
+        display(value: 1)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +42,10 @@ class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
     ///
     /// - Parameter value: Must be in [0, 15].
     func display(value: Int) {
+        
+        let v = UInt8(value)
+        print(String(v << 4, radix: 2).pad(with: "0", length: 4))
+        
         // Turn off all segments to prepare for new value.
         _ = segments?.map({
             $0.state = false
@@ -56,4 +60,16 @@ class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
         }
     }
     
+}
+
+// Idea from http://stackoverflow.com/questions/26181221/how-to-convert-a-decimal-number-to-binary-in-swift
+extension String {
+    func pad(with char: String, length: Int) -> String {
+        let diff = length - self.characters.count
+        guard diff > 0 else {
+            return self // self.substring(from: self.index(self.startIndex, offsetBy: abs(diff)))
+        }
+        
+        return String(repeating: char, count: diff) + self
+    }
 }
