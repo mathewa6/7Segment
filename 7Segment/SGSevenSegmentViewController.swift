@@ -10,6 +10,14 @@ import UIKit
 
 class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
 
+    @IBOutlet var aSegment: SGSegmentView!
+    @IBOutlet var bSegment: SGSegmentView!
+    @IBOutlet var cSegment: SGSegmentView!
+    @IBOutlet var dSegment: SGSegmentView!
+    @IBOutlet var eSegment: SGSegmentView!
+    @IBOutlet var fSegment: SGSegmentView!
+    @IBOutlet var gSegment: SGSegmentView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +31,11 @@ class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
     }
     
 
+    
+    /// Implementation of SGSegmentLogic. Displays 0x0 to 0xF for parameters between 0 to 15.
+    /// Displays '-' for invalid input.
+    ///
+    /// - Parameter value: Must be in [0, 15].
     func display(value: Int) {
         if value <= 0 {
             for seg in segments! {
