@@ -12,7 +12,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     @IBOutlet var valuePicker: UIPickerView!
     
-    let pickerValues: [UInt8] = Array(0 ..< 16)
+    let pickerValues: [Int] = Array(0 ..< 16)
+    var segmentVC: SGSevenSegmentViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         self.valuePicker.delegate = self
         self.valuePicker.dataSource = self
+        
+        self.segmentVC = self.childViewControllers.first as? SGSevenSegmentViewController
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +44,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(pickerValues[row])
+        let val = pickerValues[row]
+        self.segmentVC?.display(value: val)
     }
 }
 
