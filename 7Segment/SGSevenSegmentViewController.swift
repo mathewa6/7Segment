@@ -22,7 +22,7 @@ class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        display(value: 14/2)
+        display(value: 9)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -57,10 +57,12 @@ class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
         let l3Not = (~l3)
         let l4Not = (~l4)
         
-        // print((~l1).pos8(), ~l2 & (UInt8(1) << 2) & mask4, ~l3)
-        // print(((~l1 & ~l2 & l3) & mask4).binaryDescription())
-        print(l2,l3,l4Not)
-        print((l2 & l3 & l4Not).binaryDescription())
+        let aState = (l2Not & l4Not) | (l1Not & l3) | (l1Not & l2 & l4) | (l2 & l3) | (l1 & l3Not & l4Not) | (l1 & l2Not & l3Not)
+        let bState = (l1Not & l3Not & l4Not) | (l2Not & l4Not) | (l1Not & l2Not) | (l1Not & l3 & l4) | (l1 & l3Not & l4) | (l1 & l2Not & l3Not)
+        let cState = (l1Not & l3Not) | (l1Not & l2Not & l4) | (l1Not & l2) | (l1 & l3Not & l4) | (l1 & l2Not)
+        let dState = (l2Not & l3Not & l4Not) | (l1Not & l2Not & l3) | (l1Not & l3 & l4Not) | (l2 & l3 & l4Not) | (l2 & l3Not & l4) | (l1 & l3Not) | (l1 & l2Not & l4)
+        let eState = (l2Not & l4Not) | (l1Not & l3 & l4Not) | (l1 & l2) | (l1 & l3) | (l1 & l3Not & l4Not)
+        let fState = (l3Not & l4Not) | (l1Not & l2 & l3Not) | (l2 & l3 & l4Not) | (l1 & l3) | (l1 & l2Not)
         let gState = (l1Not & l2Not & l3) | (l1Not & l2 & l3Not) | (l2 & l3Not & l4) | (l2 & l3 & l4Not) | (l1 & l2Not) | (l1 & l3 & l4)
         
         print(gState.binaryDescription())
@@ -74,6 +76,12 @@ class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
         if value < 0 || value >= 16 {
             fSegment.state = true
         } else {
+            aSegment.state = aState > 0
+            bSegment.state = bState > 0
+            cSegment.state = cState > 0
+            dSegment.state = dState > 0
+            eSegment.state = eState > 0
+            fSegment.state = fState > 0
             gSegment.state = gState > 0
         }
     }
