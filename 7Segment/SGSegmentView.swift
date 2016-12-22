@@ -39,6 +39,12 @@ class SGSegmentView: UIView {
     private var currentStateColor: UIColor = UIColor.red {
         didSet {
             setNeedsDisplay()
+            UIView.transition(with: self,
+                              duration: 0.36,
+                              options: .transitionCrossDissolve,
+                              animations: { 
+                                self.layer.displayIfNeeded()
+            }, completion: nil)
         }
     }
     

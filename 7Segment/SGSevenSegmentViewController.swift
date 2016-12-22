@@ -22,7 +22,6 @@ class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        display(value: 9)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -45,17 +44,17 @@ class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
         
         let v = UInt8(value)
         let mask4 = (UInt8(1) << 4) - 1 // 1 << 4 is just 2^4. Subtracting 1 gives us a mask of length 4.
-        print(String(v & mask4, radix: 2).pad(with: "0", length: 8))
+        print("INPUT: ", String(v & mask4, radix: 2).pad(with: "0", length: 8))
         
         let l1 = (v.pos8()) >> 3
         let l2 = (v.pos4()) >> 2
         let l3 = (v.pos2()) >> 1
         let l4 = (v.pos1()) >> 0
         
-        let l1Not = (~l1)
-        let l2Not = (~l2)
-        let l3Not = (~l3)
-        let l4Not = (~l4)
+        let l1Not = (~l1).pos1()
+        let l2Not = (~l2).pos1()
+        let l3Not = (~l3).pos1()
+        let l4Not = (~l4).pos1()
         
         let aState = (l2Not & l4Not) | (l1Not & l3) | (l1Not & l2 & l4) | (l2 & l3) | (l1 & l3Not & l4Not) | (l1 & l2Not & l3Not)
         let bState = (l1Not & l3Not & l4Not) | (l2Not & l4Not) | (l1Not & l2Not) | (l1Not & l3 & l4) | (l1 & l3Not & l4) | (l1 & l2Not & l3Not)
@@ -65,7 +64,6 @@ class SGSevenSegmentViewController: SGSegmentViewController, SGSegmentLogic {
         let fState = (l3Not & l4Not) | (l1Not & l2 & l3Not) | (l2 & l3 & l4Not) | (l1 & l3) | (l1 & l2Not)
         let gState = (l1Not & l2Not & l3) | (l1Not & l2 & l3Not) | (l2 & l3Not & l4) | (l2 & l3 & l4Not) | (l1 & l2Not) | (l1 & l3 & l4)
         
-        print(gState.binaryDescription())
         
         // Turn off all segments to prepare for new value.
         _ = segments?.map({
