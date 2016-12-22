@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,14 +32,23 @@
                                     <segue destination="Vsy-ru-ufB" kind="embed" id="Y5j-MC-AUx"/>
                                 </connections>
                             </containerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0AE-Ce-bd9">
+                                <rect key="frame" x="0.0" y="333" width="375" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZnV-pq-9Dx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="CNZ-jY-BaL"/>
                             <constraint firstItem="ZnV-pq-9Dx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dst-P6-3AR"/>
+                            <constraint firstItem="0AE-Ce-bd9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lmh-sL-Ibk"/>
+                            <constraint firstItem="0AE-Ce-bd9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="fWh-Qg-gTc"/>
+                            <constraint firstItem="0AE-Ce-bd9" firstAttribute="top" secondItem="ZnV-pq-9Dx" secondAttribute="bottom" constant="8" id="fbr-7i-9J8"/>
                             <constraint firstItem="ZnV-pq-9Dx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="100:400" id="nWC-5i-Aak"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="valuePicker" destination="0AE-Ce-bd9" id="PKK-ZI-3dE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
