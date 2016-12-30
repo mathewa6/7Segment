@@ -113,12 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				9715F6DD1DBA887C003BBA5B /* AppDelegate.swift */,
-				9715F7111DBAE7DE003BBA5B /* SGSegmentView.swift */,
-				978FFEA41DC15DAE00E1F547 /* SGSevenSegmentViewController.swift */,
-				978FFEA51DC15DAE00E1F547 /* SGSevenSegmentViewController.xib */,
-				978FFE9D1DBD447C00E1F547 /* SGSegmentViewController.swift */,
-				978FFE9E1DBD447C00E1F547 /* SGSegmentViewController.xib */,
-				978FFEA81DC161E600E1F547 /* SGSegmentLogic.swift */,
+				972DD3F31E1713A90062BB3C /* 7Segment Classes */,
 				9715F6DF1DBA887C003BBA5B /* ViewController.swift */,
 				9715F70E1DBA97B7003BBA5B /* 7Segment.playground */,
 				9715F6E11DBA887C003BBA5B /* Main.storyboard */,
@@ -146,6 +141,19 @@
 				9715F7021DBA887C003BBA5B /* Info.plist */,
 			);
 			path = 7SegmentUITests;
+			sourceTree = "<group>";
+		};
+		972DD3F31E1713A90062BB3C /* 7Segment Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9715F7111DBAE7DE003BBA5B /* SGSegmentView.swift */,
+				978FFEA41DC15DAE00E1F547 /* SGSevenSegmentViewController.swift */,
+				978FFEA51DC15DAE00E1F547 /* SGSevenSegmentViewController.xib */,
+				978FFE9D1DBD447C00E1F547 /* SGSegmentViewController.swift */,
+				978FFE9E1DBD447C00E1F547 /* SGSegmentViewController.xib */,
+				978FFEA81DC161E600E1F547 /* SGSegmentLogic.swift */,
+			);
+			name = "7Segment Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
